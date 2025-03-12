@@ -33,7 +33,7 @@ const App = () => {
   }, [isDarkMode]);
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? "dark bg-gray-900 text-white" : "bg-white text-black"} px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]`}>
+    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? "dark bg-[#FFF9F2] text-white" : "bg-[#FFF9F2] text-black"} px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]`}>
       <ToastContainer />
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <SearchBar />

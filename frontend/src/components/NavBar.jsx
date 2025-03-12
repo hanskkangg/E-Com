@@ -20,13 +20,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     };
 
     return (
-        <div className='flex items-center justify-between py-5 font-medium bg-white dark:bg-gray-900 dark:text-white transition-colors duration-300'>
+        <div className='font-mono text-gray-700 flex items-center justify-between py-5 font-medium bg-[#FFF9F2] dark:bg-gray-900 dark:text-white transition-colors duration-300 xl:text-5xl'>
             <Link to='/'>
-                <img 
-                   src={isDarkMode ? assets.hans_logo1 : assets.hans_logo2} 
-                   className='w-36' 
-                   alt="Logo"
-                />
+                <p>ONPAPIER.</p>
+                
             </Link>
 
             <ul className='hidden sm:flex gap-5 text-sm text-gray-700 dark:text-gray-300'>

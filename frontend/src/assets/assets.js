@@ -85,6 +85,15 @@ import banana_sale from './banana_sale.png'
 import moon_icon from './moon_icon.png'
 import sun_icon from './sun_icon.png'
 
+
+import bg_ from './bg_.png'
+
+
+import cal from './cal.jpg'
+import cal1 from './cal1.jpg'
+import cal2 from './cal2.jpg'
+import cal4 from './cal4.jpg'
+
 export const assets = {
     logo,
     hero_img,
@@ -115,7 +124,12 @@ export const assets = {
     callme,
     banana_sale,
     moon_icon,
-    sun_icon
+    sun_icon,
+    bg_,
+    cal,
+    cal1,
+    cal2,
+    cal4,
 }
 
 
