@@ -14,6 +14,25 @@ const port = process.env.PORT || 4000
 connectDB()
 connectCloudinary()
 
+// CORS config
+const allowedOrigins = [
+    'https://www.onpapier.com',         // production
+    'http://localhost:3000',            // local React dev
+    'http://localhost:5173'             // local Vite dev
+  ]
+
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true)
+      } else {
+        callback(new Error('Not allowed by CORS'))
+      }
+    },
+    credentials: true
+  }))
+
+
 // middlewares
 app.use(express.json())
 app.use(cors())
