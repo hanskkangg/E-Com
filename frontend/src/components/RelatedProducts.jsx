@@ -1,22 +1,18 @@
-import React, { useContext, useEffect, useState } from 'react'; // Import React and hooks
-import { ShopContext } from '../context/ShopContext'; // Import ShopContext for global product data
-import Title from './Title'; // Import Title component
-import ProductItem from './ProductItem'; // Import ProductItem component
+import React, { useContext, useEffect, useState } from 'react';
+import { ShopContext } from '../context/ShopContext'; 
+import Title from './Title';
+import ProductItem from './ProductItem';
 
-// Component to display related products based on category and subcategory
 const RelatedProducts = ({ category, subCategory }) => {
 
-    // Get products data from ShopContext
     const { products } = useContext(ShopContext);
-    
-    // State to store related products
     const [related, setRelated] = useState([]);
 
-    // Function to find related products
+    // Find related products that match both category and subcategory
     useEffect(() => {
         if (products.length > 0) {
-            
-            let productsCopy = products.slice(); // Create a copy of the products array
+            // Create a copy of the products array
+            let productsCopy = products.slice();
             
             // Filter products that match the same category
             productsCopy = productsCopy.filter((item) => category === item.category);
@@ -28,7 +24,7 @@ const RelatedProducts = ({ category, subCategory }) => {
             setRelated(productsCopy.slice(0, 5));
         }
         
-    }, [products]); // Run this effect when 'products' change
+    }, [products]);
 
     return (
         <div className='my-24'>

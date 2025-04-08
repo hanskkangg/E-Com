@@ -16,6 +16,7 @@ export const currency = '$';
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
 
+  // Save token in localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('token', token);
   }, [token]);
@@ -23,6 +24,8 @@ const App = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       <ToastContainer />
+      
+      {/* Show login page if no token */}
       {token === "" ? (
         <Login setToken={setToken} />
       ) : (
@@ -31,6 +34,7 @@ const App = () => {
           <hr />
           <div className="flex w-full">
             <Sidebar />
+            {/* Main content area with routes */}
             <div className="w-[70%] mx-auto ml-[max(5vw,25px)] my-8 text-gray-600 text-base">
               <Routes>
                 <Route path="/" element={<List token={token} />} />  {/* Default Home Page */}

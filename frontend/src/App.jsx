@@ -17,11 +17,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify';
 
 const App = () => {
+  
+  // Check local storage for saved theme preference (dark mode)
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
 
-   // Apply dark mode when the app loads
+  // Update the HTML class and localStorage when dark mode changes
    useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
@@ -39,7 +41,7 @@ const App = () => {
       <SearchBar />
       <Routes>
 
-            {/* Set the default route "/" to show the Home component */}
+        {/* Set the default route "/" to show the Home component */}
         <Route path='/' element={<Home />} />
         <Route path='/collection' element={<Collection />} />
         <Route path='/about' element={<About />} />
@@ -52,12 +54,9 @@ const App = () => {
         <Route path='/verify' element={<Verify />} />
         </Routes>
         <Footer isDarkMode={isDarkMode} />
-
-        
     </div>
 
   )
 }
 
-// Export the App component so it can be used in other files
 export default App

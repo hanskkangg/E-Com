@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken'
 import userModel from "../models/userModel.js";
 
 
+// Create JWT token using user ID
 const createToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET)
 }
@@ -11,19 +12,17 @@ const createToken = (id) => {
 // Route for user login
 const loginUser = async (req, res) => {
     try {
-
         const { email, password } = req.body;
-
         const user = await userModel.findOne({ email });
 
+        // Check if user exists
         if (!user) {
             return res.json({ success: false, message: "User doesn't exists" })
         }
 
+        // Compare entered password with hashed password
         const isMatch = await bcrypt.compare(password, user.password);
-
         if (isMatch) {
-
             const token = createToken(user._id)
             res.json({ success: true, token })
 

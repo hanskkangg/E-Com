@@ -17,8 +17,8 @@ const placeOrder = async (req, res) => {
             items,
             address,
             amount,
-            paymentMethod: paymentMethod || "Cash on Delivery", // ✅ Correctly store the selected payment method
-            payment: paymentMethod === "E-Transfer" ? false : true, // ✅ Keep pending if E-Transfer
+            paymentMethod: paymentMethod || "Cash on Delivery", 
+            payment: paymentMethod === "E-Transfer" ? false : true, 
             date: Date.now()
         };
 

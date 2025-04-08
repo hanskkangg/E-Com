@@ -13,19 +13,23 @@ import authUser from '../middleware/auth.js';
 
 const orderRouter = express.Router();
 
-// 🔹 Admin Features
+// Admin: get all orders
 orderRouter.post('/list', adminAuth, allOrders);
+
+// Admin: update order status
 orderRouter.post('/status', adminAuth, updateStatus);
 
-// 🔹 Payment Features
+// User: place order with E-transfer or COD
 orderRouter.post('/placeEtransfer', authUser, placeOrder);
 orderRouter.post('/place', authUser, placeOrder);
+
+// User: place order using Stripe
 orderRouter.post('/stripe', authUser, placeOrderStripe);
 
-// 🔹 User Feature 
+// User: get their own orders
 orderRouter.post('/userorders', authUser, userOrders);
 
-// 🔹 Verify Stripe Payment
+// User: verify payment from Stripe
 orderRouter.post('/verifyStripe', authUser, verifyStripe);
 
 

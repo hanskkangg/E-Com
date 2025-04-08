@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { ShopContext } from '../context/ShopContext'; // Import ShopContext to access cart details
-import Title from './Title'; // Import Title component to display the heading
+import { ShopContext } from '../context/ShopContext'; 
+import Title from './Title';
 
 const CartTotal = () => {
     // Get values from ShopContext (global state)
