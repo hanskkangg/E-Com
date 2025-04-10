@@ -12,6 +12,12 @@ This is a full-stack web application designed for small business owners looking 
 
 ---
 
+## 🧱INFRASTRUCTURE
+
+![Architecture review](https://github.com/user-attachments/assets/65e941af-153d-498b-a3a5-a5a3a20f5078)
+
+---
+
 ## 🧱 Tech Stack
 
 ### Frontend
@@ -60,23 +66,38 @@ This is a full-stack web application designed for small business owners looking 
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/baeyond.git
-cd baeyond
-npm install
+git clone https://github.com/hanskkangg/E-Com.git
+cd E-come
 ```
 
-Start the dev server:
+Start development servers:
 
+#### Frontend
 ```bash
+cd frontend
+npm install
 npm run dev
 ```
 
-Make sure to add your `.env` file with keys for:
+#### Backend
+You can now run the backend using Docker Compose:
+```bash
+cd backend
+docker-compose up --build
+```
+
+#### Admin Panel
+```bash
+cd admin
+npm install
+npm run dev
+```
+
+Make sure to add your `.env` files with keys for:
 - MongoDB
 - Firebase
 - Stripe / PayPal
 - Cloudinary
-- Cloudflare
 
 ### 🚀 Deployment
 
