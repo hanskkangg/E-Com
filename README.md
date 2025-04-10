@@ -14,7 +14,8 @@ This is a full-stack web application designed for small business owners looking 
 
 ## 🧱INFRASTRUCTURE
 
-![Architecture review](https://github.com/user-attachments/assets/65e941af-153d-498b-a3a5-a5a3a20f5078)
+![Architecture review (4)](https://github.com/user-attachments/assets/be8ff129-b8e6-4518-920e-7c8dae2edc1c)
+
 
 ---
 
