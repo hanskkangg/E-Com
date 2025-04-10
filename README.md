@@ -1,4 +1,4 @@
-# 🛍️ Freelance E-commerce Websites
+# 🛍️ E-commerce Websites
 
 Welcome! This is the source code repository for **OnPapier** and ,a custom-built freelance e-commerce websites crafted with love, React, and a focus on performance and user experience.
 
