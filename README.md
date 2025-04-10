@@ -82,7 +82,7 @@ npm run dev
 #### Backend
 You can now run the backend using Docker Compose:
 ```bash
-cd backend
+cd ~
 docker-compose up --build
 ```
 
